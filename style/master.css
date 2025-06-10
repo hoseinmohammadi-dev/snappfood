@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+
+:root {
+    --primary-color: #ff00a6;
+
+}
+
 @layer base {
     .row {
         @apply flex flex-wrap
@@ -11,12 +17,73 @@
 }
 
 @layer components {
-
+    .btn {
+        @apply text-white bg-[var(--primary-color)] rounded-[7px]
+    }
 }
 
 @layer utilities {
     .bt {
         @apply border border-blue-700
     }
+
+    .anime {
+        animation: anime 9s linear infinite;
+    }
+}
+
+/* font */
+
+@font-face {
+    font-family: 'iranYekan';
+    src: url('../font/iranyekanwebregularfanum.woff') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'iranYekan';
+    src: url('../font/iranyekanwebmediumfanum.woff') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'iranYekan';
+    src: url('../font/iranyekanwebboldfanum.woff') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+body {
+    font-family: "iranYekan";
+}
+
+
+@keyframes anime {
+
+    0%,
+    20% {
+        transform: 'translateY(0%)'
+    }
+
+
+    25%,
+    45% {
+        transform: 'translateY(-100%)'
+    }
+
+
+    50%,
+    70% {
+        transform: 'translateY(-200%)'
+    }
+
+
+    75%,
+    100% {
+        transform: 'translateY(0%)'
+    }
+
 
 }
