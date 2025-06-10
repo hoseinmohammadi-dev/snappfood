@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@layer base {
+    .row {
+        @apply flex flex-wrap
+    }
+
+    .fc {
+        @apply flex justify-center items-center
+    }
+}
+
+@layer components {
+
+}
+
+@layer utilities {
+    .bt {
+        @apply border border-blue-700
+    }
+
+}
