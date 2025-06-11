@@ -18,7 +18,7 @@
 
 @layer components {
     .btn {
-        @apply text-white bg-[var(--primary-color)] rounded-[7px]
+        @apply text-white text-xl bg-[var(--primary-color)] rounded-[15px] font-extrabold hover:opacity-90
     }
 }
 
@@ -28,62 +28,83 @@
     }
 
     .anime {
-        animation: anime 9s linear infinite;
+        animation: anime 8s linear infinite;
     }
 }
 
 /* font */
 
 @font-face {
-    font-family: 'iranYekan';
-    src: url('../font/iranyekanwebregularfanum.woff') format('woff2');
+    font-family: 'YekanBakh';
+    src: url('./fonts/YekanBakh/YekanBakh-Thin.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'YekanBakh';
+    src: url('../fonts/yekan\ bakh\ en\ 01\ hairline.woff2') format('woff2');
     font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'iranYekan';
-    src: url('../font/iranyekanwebmediumfanum.woff') format('woff2');
+    font-family: 'YekanBakh';
+    src: url('../fonts/yekan\ bakh\ en\ 02\ thin.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'iranYekan';
-    src: url('../font/iranyekanwebboldfanum.woff') format('woff2');
+    font-family: 'YekanBakh';
+    src: url('../fonts/yekan\ bakh\ en\ 03\ light.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'YekanBakh';
+    src: url('../fonts/yekan\ bakh\ en\ 04\ regular.woff2') format('woff2');
     font-weight: 700;
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'YekanBakh';
+    src: url('../fonts/yekan\ bakh\ en\ 06\ bold.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'YekanBakh';
+    src: url('../fonts/yekan\ bakh\ en\ 07\ heavy.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+}
+
+
 body {
-    font-family: "iranYekan";
+    font-family: "YekanBakh";
+    font-weight: 700;
 }
 
 
 @keyframes anime {
 
-    0%,
-    20% {
-        transform: 'translateY(0%)'
+    0% ,5% {
+        transform: translateY(0);
     }
-
-
-    25%,
-    45% {
-        transform: 'translateY(-100%)'
+    25% ,30%{
+        transform: translateY(-38px);
     }
-
-
-    50%,
-    70% {
-        transform: 'translateY(-200%)'
+    50% ,55%{
+        transform: translateY(-78px);
     }
-
-
-    75%,
-    100% {
-        transform: 'translateY(0%)'
+    75% ,80%{
+        transform: translateY(-38px);
     }
-
-
+    100%{
+        transform: translateY(0);
+    }
 }
