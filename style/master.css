@@ -108,3 +108,7 @@ body {
         transform: translateY(0);
     }
 }
+
+.social{
+    color: rgba(103, 100, 100, 0.822);
+}
