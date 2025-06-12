@@ -6,6 +6,7 @@ This project was created as a practice to sharpen my layout, responsiveness, and
 ---
 
 ## 📸 Screenshots
+![Image](https://github.com/user-attachments/assets/80bfe260-1282-49dc-a51e-9919acde3ec6)
 
 ---
 
