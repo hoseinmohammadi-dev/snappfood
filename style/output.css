@@ -786,6 +786,11 @@
       background-color: var(--color-white);
     }
   }
+  .\*\:bg-cover {
+    :is(& > *) {
+      background-size: cover;
+    }
+  }
   .\*\:p-0\.5 {
     :is(& > *) {
       padding: calc(var(--spacing) * 0.5);
@@ -820,6 +825,26 @@
   .\*\*\:flex {
     :is(& *) {
       display: flex;
+    }
+  }
+  .\*\*\:rounded-tl-\[10px\] {
+    :is(& *) {
+      border-top-left-radius: 10px;
+    }
+  }
+  .\*\*\:bg-white {
+    :is(& *) {
+      background-color: var(--color-white);
+    }
+  }
+  .\*\*\:px-2 {
+    :is(& *) {
+      padding-inline: calc(var(--spacing) * 2);
+    }
+  }
+  .\*\*\:py-1 {
+    :is(& *) {
+      padding-block: calc(var(--spacing) * 1);
     }
   }
   .\*\*\:font-medium {
