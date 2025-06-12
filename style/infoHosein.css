@@ -1,0 +1,199 @@
+:root {
+    --c-text: rgb(255, 255, 255);
+    --c-sec: #202b3b;
+    --c-pr: #6e7888;
+
+}
+
+/* info hosein */
+
+.hosein {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    border-radius: 50%;
+    z-index: 999;
+
+    .circle {
+        width: 105px;
+        height: 105px;
+        filter: grayscale(80%);
+
+        &::before,
+        &::after {
+            content: '';
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: -3px;
+            left: 6px;
+            transition: 1s;
+            rotate: 10deg;
+        }
+
+        &::before {
+            background-color: var(--c-pr);
+            border-radius: 30% 70% 35% 65% / 30% 36% 64% 70%;
+            z-index: -998;
+        }
+
+        &::after {
+            background-color: var(--c-sec);
+            border-radius: 64% 36% 61% 39% / 43% 36% 64% 57%;
+            z-index: -999;
+        }
+
+        >img {
+            width: 95px;
+            height: 95px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: bottom;
+        }
+
+    }
+
+    &:hover {
+        >a {
+            >i {
+                visibility: visible;
+            }
+        }
+
+        .circle {
+
+            &::before,
+            &::after {
+                rotate: 45deg;
+            }
+        }
+    }
+
+    >a {
+        >i {
+            font-size: 18px;
+            color: var(--c-sec);
+            transition: .6s;
+            position: absolute;
+            visibility: hidden;
+
+            &:hover {
+                color: var(--c-pr);
+            }
+        }
+
+        &:nth-of-type(1) {
+            >i {
+                top: -5px;
+                left: -30px;
+            }
+        }
+
+        &:nth-of-type(2) {
+            >i {
+                top: 25px;
+                left: -42px;
+            }
+        }
+
+        &:nth-of-type(3) {
+            >i {
+                top: 57px;
+                left: -42px;
+            }
+        }
+
+        &:nth-of-type(4) {
+            >i {
+                top: 85px;
+                left: -30px;
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width:768px) {
+
+    /* info hosein */
+    .hosein {
+        position: fixed;
+        bottom: 25px;
+        right: 25px;
+
+        .circle {
+            width: 180px;
+            height: 180px;
+
+            &::before,
+            &::after {
+                width: 175px;
+                height: 175px;
+            }
+
+            >img {
+                width: 165px;
+                height: 165px;
+            }
+
+        }
+
+        >a {
+            >i {
+                font-size: 28px;
+
+            }
+
+            &:nth-of-type(1) {
+                >i {
+                    top: -5px;
+                    left: -30px;
+                }
+            }
+
+            &:nth-of-type(2) {
+                >i {
+                    top: 35px;
+                    left: -52px;
+                }
+            }
+
+            &:nth-of-type(3) {
+                >i {
+                    top: 85px;
+                    left: -52px;
+                }
+            }
+
+            &:nth-of-type(4) {
+                >i {
+                    top: 125px;
+                    left: -30px;
+                }
+            }
+        }
+    }
+}
+
+
+.info{
+    width: 100%;
+    height: 5vh;
+    font-size: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+@media screen and (min-width:460px) {
+    .info{
+        font-size: 14px;
+    }
+}
+@media screen and (min-width:730px) {
+    .info{
+        font-size: 22px;
+    }
+}
