@@ -357,6 +357,9 @@
   .h-\[600px\] {
     height: 600px;
   }
+  .h-full {
+    height: 100%;
+  }
   .w-5 {
     width: calc(var(--spacing) * 5);
   }
@@ -446,8 +449,17 @@
     --tw-translate-y: calc(170px * -1);
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
+  .scale-95 {
+    --tw-scale-x: 95%;
+    --tw-scale-y: 95%;
+    --tw-scale-z: 95%;
+    scale: var(--tw-scale-x) var(--tw-scale-y);
+  }
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
+  }
+  .cursor-pointer {
+    cursor: pointer;
   }
   .resize {
     resize: both;
@@ -558,8 +570,17 @@
   .bg-\[url\(\.\.\/img\/website_image_sokhari_1\.jpg\)\] {
     background-image: url(../img/website_image_sokhari_1.jpg);
   }
+  .p-0 {
+    padding: calc(var(--spacing) * 0);
+  }
+  .p-0\.5 {
+    padding: calc(var(--spacing) * 0.5);
+  }
   .p-1 {
     padding: calc(var(--spacing) * 1);
+  }
+  .p-2 {
+    padding: calc(var(--spacing) * 2);
   }
   .p-\[5\%\] {
     padding: 5%;
@@ -752,6 +773,11 @@
   .\*\:min-w-\[120px\] {
     :is(& > *) {
       min-width: 120px;
+    }
+  }
+  .\*\:cursor-pointer {
+    :is(& > *) {
+      cursor: pointer;
     }
   }
   .\*\:flex-col {
@@ -1009,6 +1035,11 @@
       justify-content: center;
     }
   }
+  .lg\:justify-start {
+    @media (width >= 64rem) {
+      justify-content: flex-start;
+    }
+  }
   .lg\:rounded-3xl {
     @media (width >= 64rem) {
       border-radius: var(--radius-3xl);
@@ -1101,6 +1132,11 @@
     @media (width >= 80rem) {
       --tw-translate-y: calc(250px * -1);
       translate: var(--tw-translate-x) var(--tw-translate-y);
+    }
+  }
+  .xl\:justify-start {
+    @media (width >= 80rem) {
+      justify-content: flex-start;
     }
   }
 }
@@ -1221,6 +1257,21 @@ body {
   syntax: "*";
   inherits: false;
   initial-value: 0;
+}
+@property --tw-scale-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
+}
+@property --tw-scale-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
+}
+@property --tw-scale-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
 }
 @property --tw-rotate-x {
   syntax: "*";
@@ -1374,27 +1425,15 @@ body {
   syntax: "*";
   inherits: false;
 }
-@property --tw-scale-x {
-  syntax: "*";
-  inherits: false;
-  initial-value: 1;
-}
-@property --tw-scale-y {
-  syntax: "*";
-  inherits: false;
-  initial-value: 1;
-}
-@property --tw-scale-z {
-  syntax: "*";
-  inherits: false;
-  initial-value: 1;
-}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
       --tw-translate-x: 0;
       --tw-translate-y: 0;
       --tw-translate-z: 0;
+      --tw-scale-x: 1;
+      --tw-scale-y: 1;
+      --tw-scale-z: 1;
       --tw-rotate-x: initial;
       --tw-rotate-y: initial;
       --tw-rotate-z: initial;
@@ -1430,9 +1469,6 @@ body {
       --tw-drop-shadow-color: initial;
       --tw-drop-shadow-alpha: 100%;
       --tw-drop-shadow-size: initial;
-      --tw-scale-x: 1;
-      --tw-scale-y: 1;
-      --tw-scale-z: 1;
     }
   }
 }
